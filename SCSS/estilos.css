@@ -1,0 +1,32 @@
+.header__Titulo-Principal {
+  background-image: url(/IMAGENES/selva_urbana.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header__Titulo-Principal h1 {
+  color: floralwhite;
+  text-align: center;
+  -webkit-text-decoration: underline floralwhite;
+          text-decoration: underline floralwhite;
+  padding-top: 10vh;
+  font-size: 120px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.header__Titulo-Principal h2 {
+  color: floralwhite;
+  text-align: center;
+  -webkit-text-decoration: underline floralwhite;
+          text-decoration: underline floralwhite;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  font-size: 80px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: italic;
+}
+/*# sourceMappingURL=estilos.css.map */
