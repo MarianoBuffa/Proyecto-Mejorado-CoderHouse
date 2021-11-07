@@ -1,3 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to left, darkseagreen, white); /* Aqui esta la gradiente */
+}
+
 .header__Titulo-Principal {
     background-image: url(/IMAGENES/selva_urbana.jpg);
     background-repeat: no-repeat;
@@ -27,6 +37,14 @@
     font-weight: 500;
     font-style: italic;
 }
+
+/* Bienvenida de inicio */
+
+#slider{
+    width: 45%;
+    padding: 2rem;
+}
+
 
 /* Galeria de imagenes */
 
@@ -61,7 +79,6 @@ h3{
 footer {
     background-image: url("../Imagenes/selva_urbana.jpg");
     height: auto;
-    clear: both;
 }
 
 .footer__botonera {
@@ -84,4 +101,16 @@ footer {
     font-weight: bold;
     display: inline-block;
     color: white;
+}
+
+/* Contacto */
+
+.seccion__contacto {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

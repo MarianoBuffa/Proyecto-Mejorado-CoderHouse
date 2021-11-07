@@ -1,3 +1,16 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: -webkit-gradient(linear, right top, left top, from(darkseagreen), to(white));
+  background-image: linear-gradient(to left, darkseagreen, white);
+  /* Aqui esta la gradiente */
+}
+
 .header__Titulo-Principal {
   background-image: url(/IMAGENES/selva_urbana.jpg);
   background-repeat: no-repeat;
@@ -28,6 +41,12 @@
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-style: italic;
+}
+
+/* Bienvenida de inicio */
+#slider {
+  width: 45%;
+  padding: 2rem;
 }
 
 /* Galeria de imagenes */
@@ -65,7 +84,6 @@ h3 {
 footer {
   background-image: url("../Imagenes/selva_urbana.jpg");
   height: auto;
-  clear: both;
 }
 
 .footer__botonera {
@@ -88,5 +106,25 @@ footer {
   font-weight: bold;
   display: inline-block;
   color: white;
+}
+
+/* Contacto */
+.seccion__contacto {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=estilos.css.map */
