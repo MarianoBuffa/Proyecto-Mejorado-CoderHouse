@@ -1,3 +1,12 @@
+/* Colores */
+$blanco: floralwhite;
+$verde: rgb(60, 94, 60);
+
+
+$titulo: $blanco;
+$subtitulos: $verde;
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -16,9 +25,9 @@ body {
 }
 
 .header__Titulo-Principal h1 {
-    color: floralwhite;
+    color: $titulo;
     text-align: center;
-    text-decoration: underline floralwhite;
+    text-decoration: underline $titulo;
     padding-top: 10vh;
     font-size: 120px;
     font-family: 'Playfair Display', serif;
@@ -27,9 +36,9 @@ body {
 }
 
 .header__Titulo-Principal h2 {
-    color: floralwhite;
+    color: $titulo;
     text-align: center;
-    text-decoration: underline floralwhite;
+    text-decoration: underline $titulo;
     padding-top: 5vh;
     padding-bottom: 10vh;
     font-size: 80px;
@@ -113,4 +122,30 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Blog PETUNIAS y demas */
+
+.Titulo--inicial{
+    font-family: 'Playfair Display', serif;
+    color: $subtitulos;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.Blog {
+    border: 2px;
+    border-style: dashed;
+	border-radius: 2px;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	margin-bottom: 3rem; 
+    flex-wrap: nowrap;
+}
+
+.Blog__img {
+	width: 300px;
+	height: 180px;
+	margin-right: 30px;
 }
