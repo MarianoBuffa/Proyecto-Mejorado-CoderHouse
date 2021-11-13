@@ -1,4 +1,6 @@
 /* Colores */
+/* Variables */
+/* mixins */
 /* Fin Variables */
 * {
   margin: 0px;
@@ -11,63 +13,68 @@ body {
   background-image: -webkit-gradient(linear, right top, left top, from(darkseagreen), to(white));
   background-image: linear-gradient(to left, darkseagreen, white);
   /* Aqui esta la gradiente */
+  /* Bienvenida de inicio */
+  /* Galeria de imagenes */
+  /* Footer */
+  /* Contacto */
+  /* Blog PETUNIAS y demas */
+  /* Aqui comienzan los desafios SASS y SASS II ------------------------------------------------------------ */
+  /* Seccion Mercado */
 }
 
-.header__Titulo-Principal {
+body .header__Titulo-Principal {
   background-image: url("../IMAGENES/Inicio/selva.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.header__Titulo-Principal h1 {
-  color: floralwhite;
+body .header__Titulo-Principal h1 {
   text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   -webkit-text-decoration: underline floralwhite;
           text-decoration: underline floralwhite;
+  font-weight: 500;
+  color: floralwhite;
   padding-top: 10vh;
   font-size: 120px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-style: italic;
 }
 
-.header__Titulo-Principal h2 {
-  color: floralwhite;
+body .header__Titulo-Principal h2 {
   text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   -webkit-text-decoration: underline floralwhite;
           text-decoration: underline floralwhite;
+  font-weight: 500;
+  color: floralwhite;
   padding-top: 5vh;
   padding-bottom: 10vh;
   font-size: 80px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-style: italic;
 }
 
-/* Bienvenida de inicio */
-#slider {
+body #slider {
   width: 45%;
   padding: 2rem;
 }
 
-/* Galeria de imagenes */
-h3 {
+body h3 {
   text-align: center;
   text-decoration: underline;
   font-size: 5rem;
   padding: 1rem;
 }
 
-#galeria {
+body #galeria {
   padding: 2rem;
 }
 
-#card {
+body #card {
   padding: 1rem;
 }
 
-#card__efecto {
+body #card__efecto {
   border-radius: 8px;
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -75,43 +82,41 @@ h3 {
   transition: all 0.25s;
 }
 
-#card__efecto:hover {
+body #card__efecto:hover {
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
   -webkit-box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
           box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-footer {
+body footer {
   background-image: url("../IMAGENES/Inicio/selva.jpg");
   height: auto;
 }
 
-.footer__botonera {
+body .footer__botonera {
   margin: 35px;
   display: inline-block;
   padding-left: 25px;
 }
 
-.footer__botonera ul {
+body .footer__botonera ul {
   list-style: none;
 }
 
-.footer__botonera ul li {
+body .footer__botonera ul li {
   padding: 5px 5px 5px 5px;
   display: inline;
 }
 
-.footer__botonera ul li a {
+body .footer__botonera ul li a {
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   color: white;
 }
 
-/* Contacto */
-.seccion__contacto {
+body .seccion__contacto {
   margin: 0 auto;
   padding-bottom: 10px;
   width: 100%;
@@ -130,15 +135,14 @@ footer {
           align-items: center;
 }
 
-/* Blog PETUNIAS y demas */
-.Titulo--inicial {
+body .Titulo--inicial {
   font-family: 'Playfair Display', serif;
   color: #3c5e3c;
   font-size: 3rem;
   font-style: italic;
 }
 
-.Blog {
+body .Blog {
   border: 2px;
   border-style: dashed;
   border-radius: 2px;
@@ -154,15 +158,13 @@ footer {
       flex-wrap: nowrap;
 }
 
-.Blog__img {
+body .Blog__img {
   width: 300px;
   height: 180px;
   margin-right: 30px;
 }
 
-/* Aqui comienzan los desafios SASS y SASS II ------------------------------------------------------------ */
-/* Seccion Mercado */
-.market {
+body .market {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,7 +172,7 @@ footer {
       flex-wrap: wrap;
 }
 
-.market .productos {
+body .market .productos {
   text-align: center;
   margin: 1rem;
   padding: 2rem;
@@ -199,46 +201,48 @@ footer {
   transition: all 0.25s;
 }
 
-.market .productos a {
-  color: white;
+body .market .productos a {
+  color: floralwhite;
   background-color: rgba(219, 17, 17, 0.2);
   text-decoration: none;
   padding: 5px;
 }
 
-.market .productos h4 {
+body .market .productos h4 {
   text-decoration: underline;
   font-style: italic;
 }
 
-.market .productos p {
+body .market .productos p {
   margin: 20px;
 }
 
-.market .productos--out {
+body .market .productos--out {
   background-color: gray;
 }
 
-.market .productos--novedad {
+body .market .productos--novedad {
   background-color: #e26969;
 }
 
-.market .productos--novedad span {
+body .market .productos--novedad span {
   font-size: 25px;
 }
 
-.market .productos--oferta {
+body .market .productos--oferta {
   background-color: #0fe71a;
 }
 
-.market .productos--oferta span {
+body .market .productos--oferta span {
   font-size: 30px;
 }
 
-.market .productos:hover {
+body .market .productos:hover {
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
   -webkit-box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
           box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Fin body */
 /*# sourceMappingURL=estilos.css.map */

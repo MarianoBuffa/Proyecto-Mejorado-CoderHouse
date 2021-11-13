@@ -1,10 +1,43 @@
 /* Colores */
 $blanco: floralwhite;
 $verde: rgb(60, 94, 60);
+$musgo: darkseagreen;
+$blanco2: white;
+$negro: rgba(0, 0, 0, 0.2);
+$bordo: rgba(219, 17, 17, 0.2);
+$verde-market: rgb(24, 39, 27); 
+$gris: gray;
+$salmon: rgb(226, 105, 105);
+$verde-oferta: rgb(15, 231, 26);
 
+
+/* Variables */
 
 $titulo: $blanco;
 $subtitulos: $verde;
+
+/* mixins */
+
+@mixin estilo__cabecera {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    text-decoration: underline $titulo;
+    font-weight: 500;
+    color: $titulo;
+}
+
+@mixin efecto {
+    border-radius: 8px;
+    box-shadow: 0 2px 2px $negro;
+    transition: all 0.25s;
+}
+
+@mixin efecto-hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px $negro;
+}
+
 
 /* Fin Variables */
 
@@ -15,38 +48,28 @@ $subtitulos: $verde;
 }
 
 body {
-    background-image: linear-gradient(to left, darkseagreen, white); /* Aqui esta la gradiente */
-}
+    background-image: linear-gradient(to left, $musgo, $blanco2); /* Aqui esta la gradiente */
 
-.header__Titulo-Principal {
-    background-image: url("../IMAGENES/Inicio/selva.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
-.header__Titulo-Principal h1 {
-    color: $titulo;
-    text-align: center;
-    text-decoration: underline $titulo;
-    padding-top: 10vh;
-    font-size: 120px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.header__Titulo-Principal h2 {
-    color: $titulo;
-    text-align: center;
-    text-decoration: underline $titulo;
-    padding-top: 5vh;
-    padding-bottom: 10vh;
-    font-size: 80px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    font-style: italic;
-}
+    .header__Titulo-Principal {
+        background-image: url("../IMAGENES/Inicio/selva.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+        h1 {
+        @include estilo__cabecera;
+        padding-top: 10vh;
+        font-size: 120px;
+        }
+    
+        h2 {
+        @include estilo__cabecera;
+        padding-top: 5vh;
+        padding-bottom: 10vh;
+        font-size: 80px;
+        }
+    }
 
 /* Bienvenida de inicio */
 
@@ -74,14 +97,11 @@ h3{
 }
 
 #card__efecto {
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    transition: all 0.25s;
+    @include efecto;
 }
 
 #card__efecto:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    @include efecto-hover;
 }
 
 /* Footer */
@@ -95,22 +115,22 @@ footer {
     margin: 35px;
     display: inline-block;
     padding-left: 25px;
-}
 
-.footer__botonera ul {
-    list-style: none;
-}
+    ul {
+        list-style: none;
 
-.footer__botonera ul li {
-    padding: 5px 5px 5px 5px;
-    display: inline;
-}
+        li {
+            padding: 5px 5px 5px 5px;
+            display: inline;
 
-.footer__botonera ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    color: white;
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                display: inline-block;
+                color: $blanco2;
+                }
+            }
+        }
 }
 
 /* Contacto */
@@ -155,16 +175,7 @@ footer {
 
 /* Seccion Mercado */
 
-@mixin efecto {
-        border-radius: 8px;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-        transition: all 0.25s;
-}
 
-@mixin efecto-hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
 
 .market {
     display: flex;
@@ -175,7 +186,7 @@ footer {
         margin: 1rem;
         padding: 2rem;
         border-radius: 1rem;
-        background-color: rgb(24, 39, 27);
+        background-color: $verde-market;
         height: 280px;
         width: 280px;
         color: $titulo;
@@ -186,8 +197,8 @@ footer {
         @include efecto;
 
         a {
-            color: rgb(255, 255, 255);
-            background-color: rgba(219, 17, 17, 0.2);
+            color: $blanco;
+            background-color: $bordo;
             text-decoration: none;
             padding: 5px;
         }
@@ -201,18 +212,18 @@ footer {
         }
 
         &--out {
-            background-color: gray;
+            background-color: $gris;
         }
 
         &--novedad {
-            background-color: rgb(226, 105, 105);
+            background-color: $salmon;
             span {
                 font-size: 25px;
             }
         }
 
         &--oferta {
-            background-color: rgb(15, 231, 26);
+            background-color: $verde-oferta;
             span {
                 font-size: 30px;
             }
@@ -222,3 +233,6 @@ footer {
         @include efecto-hover;
     }
 }
+
+
+} /* Fin body */
